@@ -17,9 +17,9 @@ pipelines:
         - animal:    lizard             # - Set 3
           mineral:   lead
 
-      exclude:
-        - environmentVariables:
-            [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
+#       exclude:
+#         - environmentVariables:
+#             [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
 
       runtimes:                         # Runtimes for steplets
         - type: image
