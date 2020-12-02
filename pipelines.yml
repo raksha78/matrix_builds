@@ -15,8 +15,8 @@ pipelines:
             - animal:    lizard             # - Set 3
               mineral:   lead
 
-#           exclude:
-#             - environmentVariables:
+          exclude:
+            - environmentVariables:
                     animal:dog
                     mineral:copper
                     vegetable:carrot
