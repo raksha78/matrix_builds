@@ -24,7 +24,7 @@ pipelines:
             - type: image
               image:
                 auto:
-                  language: node
+                  language: nodeeeeee
                   versions:
                     - 8.17.19
           
