@@ -19,6 +19,8 @@ pipelines:
             - nodePool:              # that are not executed 
               environmentVariables:
                 animal: dog
+                mineral:   copper
+                vegetable: carrot
               runtime: 
 #             - environmentVariables:
 #                 [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
