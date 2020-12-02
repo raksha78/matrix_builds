@@ -20,7 +20,6 @@ pipelines:
                 animal: dog
                 mineral: copper
                 vegetable: carrot
-              runtime: 
 #             - environmentVariables:
 #                 [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
           runtimes:                         # Runtimes for steplets
