@@ -5,7 +5,7 @@ pipelines:
         type: Matrix
         stepMode: Bash
         stepletMultipliers:
-          fastFail: false
+          fastFail: true
           allowFailures:
             - environmentVariables:
                 delay: 1
