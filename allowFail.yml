@@ -6,15 +6,19 @@ pipelines:
         stepMode: Bash
         stepletMultipliers:
           fastFail: true
-#           allowFailures:
-#             - environmentVariables:
-#                 delay: 1
-#                 fail: 'true'
+          allowFailures:
+            - environmentVariables:
+                delay: 1
+                fail: 'true'
           environmentVariables:
             - delay: 1
               fail: 'true'
+            - delay: 2
+              fail: 'true'
+            - delay: 3
+              fail: 'false'
             - delay: 5
-              fail: 'false'          
+              fail: 'false' 
         execution:
           onStart:
             - sleep "$delay"
