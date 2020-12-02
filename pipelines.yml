@@ -3,11 +3,7 @@ pipelines:
     steps:
       - name: matrix_example
         type: Matrix
-        stepMode: Bash
-        configuration:
-          inputSteps:
-            - name: matrix_fan_out_example
-
+        stepMode: Bash 
         stepletMultipliers:
           environmentVariables:             # Sets of environment variables for steplets
             - animal:    dog                # - Set 1
