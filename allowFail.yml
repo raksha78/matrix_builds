@@ -6,10 +6,10 @@ pipelines:
         stepMode: Bash
         stepletMultipliers:
           fastFail: true
-          allowFailures:
-            - environmentVariables:
-                delay: 1
-                fail: 'true'
+#           allowFailures:
+#             - environmentVariables:
+#                 delay: 1
+#                 fail: 'true'
           environmentVariables:
             - delay: 1
               fail: 'true'
