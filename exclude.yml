@@ -15,7 +15,7 @@ pipelines:
             - animal:    lizard             # - Set 3
               mineral:   lead
           exclude:
-            - nodePool:              # that are not executed 
+            - nodePool: u16dynamic          # that are not executed 
               environmentVariables:
                 animal: dog
                 mineral:   copper
