@@ -14,7 +14,15 @@ pipelines:
               vegetable: broccoli
             - animal:    lizard             # - Set 3
               mineral:   lead
-
+          exclude:
+            - nodePool:              # that are not executed 
+              environmentVariables:
+                animal: dog
+                mineral: copper
+                vegetable: carrot
+              runtime: 
+#             - environmentVariables:
+#                 [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
           runtimes:                         # Runtimes for steplets
             - type: image
               image:
@@ -28,6 +36,7 @@ pipelines:
                   language: node
                   versions:
                     - 8.17.0
+          
         execution:
           onExecute:
             - echo "I am executing matrix steplet ${steplet_id}"
