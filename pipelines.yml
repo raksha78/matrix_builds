@@ -16,17 +16,14 @@ pipelines:
               mineral:   lead
 
           exclude:
-            - nodePool:              # that are not executed 
-              environmentVariables:
-                animal: dog
-                mineral: copper
-                vegetable: carrot
-              runtime: 
-#             - environmentVariables:
-#                     animal:dog
-#                     mineral:copper
-#                     vegetable:carrot
-#                 [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
+#             - nodePool:              # that are not executed 
+#               environmentVariables:
+#                 animal: dog
+#                 mineral: copper
+#                 vegetable: carrot
+#               runtime: 
+            - environmentVariables:
+                [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
 
           runtimes:                         # Runtimes for steplets
             - type: image
