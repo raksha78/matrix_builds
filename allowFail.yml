@@ -20,5 +20,6 @@ pipelines:
             - sleep "$delay"
           onExecute:
             - echo "I am on matrix step"
-            - [ $fail == 'false' ] 
+            - |
+              [ $fail == 'false' ] 
             - ls -l .          
