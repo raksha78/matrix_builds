@@ -9,34 +9,40 @@ pipelines:
             - animal:    dog                # - Set 1
               mineral:   copper
               vegetable: carrot
-            - animal:    goat               # - Set 2
-              mineral:   iron
-              vegetable: broccoli
-            - animal:    lizard             # - Set 3
-              mineral:   lead
-          exclude:
-            - environmentVariables:
-                animal: dog
-                mineral: copper
-                vegetable: carrot
-            - runtime: 
-                 type: image
-                 image:
-                    auto:
-                      language: java
-                      versions:
-                        - 13.0
+#             - animal:    goat               # - Set 2
+#               mineral:   iron
+#               vegetable: broccoli
+#             - animal:    lizard             # - Set 3
+#               mineral:   lead
+#           exclude:
+#             - environmentVariables:
+#                 animal: dog
+#                 mineral: copper
+#                 vegetable: carrot
+#             - runtime: 
+#                  type: image
+#                  image:
+#                     auto:
+#                       language: java
+#                       versions:
+#                         - 13.0
           runtimes:                         # Runtimes for steplets
-            - type: image
-              image:
-                auto:
-                  language: java
-                  versions:
-                    - 13.0
+#             - type: image
+#               image:
+#                 auto:
+#                   language: java
+#                   versions:
+#                     - 13.0
             - type: image
               image:
                 custom:
                   name: shippabledocker/jfreq
+                  tag: latest
+                  registry: docker_v
+            - type: image
+              image:
+                custom:
+                  name: shippabledocker/jfreqqq
                   tag: latest
                   registry: docker_v
 #             - type: image
