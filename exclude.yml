@@ -36,8 +36,8 @@ pipelines:
             - type: image
               image:
                 custom:
-                  name: shippabledocker/helloworldtext
-                  tag: work
+                  name: shippabledocker/jfreq
+                  tag: latest
                   registry: docker_v
 #             - type: image
 #               image:
