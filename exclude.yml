@@ -34,7 +34,7 @@ pipelines:
                   versions:
                     - 13.0
             - type: image
-                image:
+               image:
                   custom:
                     name: shippabledocker/helloworldtext
                     tag: work
