@@ -12,22 +12,23 @@ pipelines:
 #                 fail: 'true'
           exclude:
             - environmentVariables:
-                delay: 3
-                fail: 'false'
+                env1: 2
+                env2: 'yoo'
           environmentVariables:
-            - delay: 1
-              fail: 'true'
-            - delay: 2
-              fail: 'true'
-            - delay: 3
-              fail: 'false'
-            - delay: 5
-              fail: 'false' 
+            - env1: 1
+              env2: 'yoo1'
+            - env1: 2
+              env2: 'yoo'
+#             - delay: 3
+#               fail: 'false'
+#             - delay: 5
+#               fail: 'false' 
         execution:
-          onStart:
-            - sleep "$delay"
+#           onStart:
+#             - sleep "$delay"
           onExecute:
             - echo "I am on matrix step"
-            - |
-              [ $fail == 'false' ] 
-            - ls -l .          
+            - echo "$env1 $env2"
+#             - |
+#               [ $fail == 'false' ] 
+#             - ls -l .          
