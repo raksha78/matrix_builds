@@ -34,11 +34,11 @@ pipelines:
                   versions:
                     - 13.0
             - type: image
-               image:
-                  custom:
-                    name: shippabledocker/helloworldtext
-                    tag: work
-                    registry: docker_v
+              image:
+                custom:
+                  name: shippabledocker/helloworldtext
+                  tag: work
+                  registry: docker_v
 #             - type: image
 #               image:
 #                 auto:
