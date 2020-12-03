@@ -1,5 +1,5 @@
 pipelines:
-  - name: S_Matrix_MN_00123
+  - name: S_Matrix
     steps:
       - name: matrix_example
         type: Matrix
@@ -15,23 +15,17 @@ pipelines:
             - animal:    lizard             # - Set 3
               mineral:   lead
           exclude:
-            - nodePool:           # that are not executed 
-              environmentVariables:
+            - environmentVariables:
                 animal: dog
-                mineral:   copper
+                mineral: copper
                 vegetable: carrot
-#               runtime: 
-#                  type: image
-#                  image:
-#                     auto:
-#                       language: java
-#                       versions:
-#                         - 13.0
-                
-#             - environmentVariables:
-#                 [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
-#             - environmentVariables:
-#                 [{"animal":"dog","mineral":"copper","vegetable":"carrot"}]
+            - runtime: 
+                 type: image
+                 image:
+                    auto:
+                      language: java
+                      versions:
+                        - 13.0
           runtimes:                         # Runtimes for steplets
             - type: image
               image:
