@@ -33,12 +33,19 @@ pipelines:
                   language: java
                   versions:
                     - 13.0
+#             - type: image
+#               image:
+#                 auto:
+#                   language: node
+#                   versions:
+#                     - 8.17.0
+                   
             - type: image
-              image:
-                auto:
-                  language: node
-                  versions:
-                    - 8.17.0
+                image:
+                  custom:
+                    name: shippabledocker/helloworldtext
+                    tag: work
+                    registry: docker_v
           
         execution:
           onExecute:
